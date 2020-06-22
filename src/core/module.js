@@ -25,7 +25,6 @@ export class Module {
     renderRoute(tag, route) {
         document.querySelector(tag).innerHTML = route.template;
         this.subComponents.forEach( c => {
-            //console.log(typeof c.selecor);
             c.render()
         });  //?
     }
@@ -39,7 +38,6 @@ export class Module {
         {
             if (key[0] === url) {
                 route = key[1];
-                //console.log(route);
                 this.renderRoute('router-outlet', route);
             } 
         }
